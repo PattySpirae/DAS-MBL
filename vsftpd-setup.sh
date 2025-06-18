@@ -15,6 +15,11 @@ sudo apt install -y vsftpd
 sudo mkdir -p $FTP_ROOT
 sudo chmod 755 $FTP_ROOT
 
+# Ensure /usr/sbin/nologin is in /etc/shells (required for PAM)
+if ! grep -q "^/usr/sbin/nologin$" /etc/shells; then
+  echo "/usr/sbin/nologin" | sudo tee -a /etc/shells
+fi
+
 # Create each user and their isolated directory
 for user in "${FTP_USERS[@]}"; do
   USER_HOME="$FTP_ROOT/$user"

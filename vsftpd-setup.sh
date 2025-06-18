@@ -5,7 +5,7 @@ set -e
 # Define users
 FTP_USERS=("mblsite1" "mblsite2" "mblsite3")
 FTP_ROOT="/home/mbl_ftp"
-FTP_PASSWORD="mbldasftp!123"   # Change this before using in production
+FTP_PASSWORD="mbldasftp123"   # Change this before using in production
 
 # Update and install vsftpd
 sudo apt update

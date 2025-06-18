@@ -7,7 +7,7 @@ fi
 
 USERNAME="mblsite4" #add new site name here
 FTP_ROOT="/home/mbl_ftp"
-PASSWORD="mbldasftp!123"
+PASSWORD="mbldasftp123"
 
 USER_HOME="$FTP_ROOT/$USERNAME"
 
